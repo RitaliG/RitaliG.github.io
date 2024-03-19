@@ -6,4 +6,3 @@
 
 ### About me
 I joined the Joint Astronomy and Astrophysics Program at the Department of Physics, Indian Institute of Science in 2019. Prior to this, I earned my Master's degree (M.Sc. Physics) from the *University of Calcutta*, having completed my Bachelor's (B.Sc. Physics) from the esteemed *Bethune College*. Born in the vibrant city of Nashik in Maharashtra, I had the opportunity to experience life across various corners of India as my family moved across cities before eventually settling in the *city of joy*, Kolkata, in West Bengal. From childhood, I have inculcated a profound appreciation for the diverse cultures across India, as well as a passion for exploring new places and traveling. In my spare time, you would find me immersed in a canvas or, sometimes, cooking a warm meal with my friends and family.
-***
