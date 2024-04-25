@@ -1,3 +1,6 @@
+script:
+    - cd html/ && touch .nojekyll
+
 deploy:
   provider: pages
   target_branch: gh-pages
