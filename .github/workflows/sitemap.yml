@@ -33,4 +33,5 @@ jobs:
           [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action.
         branch: sitemap-auto-pull
         delete-branch: true
-        author: ritalig <ritsg11@gmail.com>
+        author: RitaliG <ritsg11@gmail.com>
+        committer: RitaliG <ritsg11@gmail.com>
