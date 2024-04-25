@@ -4,7 +4,7 @@ on:
   # allows you to manually run the job at anytime
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
 
 jobs:
   sitemap_job:
