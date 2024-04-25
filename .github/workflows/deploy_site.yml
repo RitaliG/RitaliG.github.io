@@ -10,9 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # - name: Build
-    #   run: cp CNAME ./html
-
+    
     - name: Deploy
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/dev' }}
       uses: peaceiris/actions-gh-pages@v4
