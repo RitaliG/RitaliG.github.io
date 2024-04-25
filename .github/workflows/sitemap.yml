@@ -23,8 +23,8 @@ jobs:
       with:
         base-url-path: https://www.ritalighosh.com/
         include=pdf: true
-        exclude-path: >
-          /simulations
+        # exclude-path: >
+        #  /simulations
         
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
