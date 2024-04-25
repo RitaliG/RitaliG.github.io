@@ -1,0 +1,28 @@
+name: Build
+on:
+  push:
+    branches: [ main, dev ] 
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    #- name: Build
+    #  run: 
+    #    mkdir -p ./html/.github/workflows && cp .github/workflows/sitemap.yml ./html/.github/workflows
+
+    - name: Deploy
+      if: ${{ github.event_name == 'push' }}
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./html
+        cname: www.ritalighosh.com
+        user_name: 'RitaliG'
+        user_email: 'ritsg11@gmail.com'
+        enable_jekyll: false
+        publish_branch: gh-pages
+        force_orphan: true
