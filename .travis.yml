@@ -1,7 +1,9 @@
 language: generic
 os: linux
 dist: xenial
-
+branches:
+    only:
+        - main
 script:
     - touch html/.nojekyll
 
@@ -12,6 +14,7 @@ deploy:
   fqdn: www.ritalighosh.com
   github_token: $TRAVIS_GIT_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
+  skip_cleanup: true
   local_dir: html
   email: ritsg11@gmail.com
   name: RitaliG
