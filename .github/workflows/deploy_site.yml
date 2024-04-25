@@ -10,9 +10,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    
+    - name: Build
+      run: 
+        mkdir -p ./html/.github/workflows && cp .github/workflows/sitemap.yml ./html/.github/workflows
+
     - name: Deploy
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/dev' }}
+      if: ${{ github.event_name == 'push' }}
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
