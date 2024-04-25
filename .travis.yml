@@ -1,11 +1,15 @@
+language: generic
+os: linux
+dist: xenial
+
 script:
-    - cd html/ && touch .nojekyll
+    - touch html/.nojekyll
 
 deploy:
   provider: pages
   target_branch: gh-pages
+  strategy: git
   fqdn: www.ritalighosh.com
-  skip_cleanup: true
   github_token: $TRAVIS_GIT_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   local_dir: html
