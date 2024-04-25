@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build
-      run: 
-        mkdir -p ./html/.github/workflows && cp .github/workflows/sitemap.yml ./html/.github/workflows
+    #- name: Build
+    #  run: 
+    #    mkdir -p ./html/.github/workflows && cp .github/workflows/sitemap.yml ./html/.github/workflows
 
     - name: Deploy
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/dev' }}
