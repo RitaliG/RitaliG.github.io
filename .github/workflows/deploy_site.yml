@@ -25,3 +25,4 @@ jobs:
         user_email: 'ritsg11@gmail.com'
         enable_jekyll: false
         publish_branch: gh-pages
+        force_orphan: true
