@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0 
 
@@ -22,9 +22,13 @@ jobs:
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://www.ritalighosh.com/
+        path-to-root: html
+        include=pdf: true
+        exclude-path: >
+          /simulations
         
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
+      uses: peter-evans/create-pull-request@v6
       with:
         title: "Automated sitemap update"
         body: > 

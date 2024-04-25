@@ -1,0 +1,12 @@
+deploy:
+  provider: pages
+  target_branch: gh-pages
+  fqdn: www.ritalighosh.com
+  skip_cleanup: true
+  github_token: $TRAVIS_GIT_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: html
+  email: ritsg11@gmail.com
+  name: RitaliG
+  on:
+    branch: main
