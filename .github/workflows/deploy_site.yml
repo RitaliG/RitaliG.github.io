@@ -1,0 +1,26 @@
+name: Build
+on:
+  push:
+    branches: [ main, dev ] 
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    # - name: Build
+    #   run: cp CNAME ./html
+
+    - name: Deploy
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.TRAVIS_GIT_TOKEN }}
+        publish_dir: ./html
+        cname: www.ritalighosh.com
+        user_name: 'RitaliG'
+        user_email: 'ritsg11@gmail.com'
+        enable_jekyll: false
+        publish_branch: gh-pages
