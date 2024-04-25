@@ -17,7 +17,7 @@ jobs:
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.TRAVIS_GIT_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./html
         cname: www.ritalighosh.com
         user_name: 'RitaliG'
