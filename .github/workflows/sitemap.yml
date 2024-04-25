@@ -22,6 +22,7 @@ jobs:
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://www.ritalighosh.com/
+        path-to-root: ./html
         include-pdf: true
         # exclude-path: >
         #  /simulations
