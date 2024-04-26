@@ -29,20 +29,25 @@ jobs:
         enable_jekyll: false
         publish_branch: gh-pages
         force_orphan: true
-        
+
+  sitemap:
+    name: Sitemap
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+    
     - name: Checkout to the gh-pages branch
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         ref: gh-pages
-        path: gh-pages
-        
+                
     - name: Sitemap generation
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://www.ritalighosh.com/
-        path-to-root: ./gh-pages
+        # path-to-root: ./html
         include-pdf: true
         # exclude-path: >
         #  /simulations
