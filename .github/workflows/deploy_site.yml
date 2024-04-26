@@ -68,8 +68,13 @@ jobs:
     
     - name: Commit website sitemap and push all commits to gh-pages
       run: |
-        git config --global user.name 'RitaliG'
-        git config --global user.email 'ritsg11@gmail.com'
-        git add .
-        git commit -m "Automated sitemap update by GitHub action."
-        git push              
+        if [[ `git status --porcelain` ]]; then
+          echo "Pushing new sitemap.xml!"
+          git config --global user.name 'RitaliG'
+          git config --global user.email 'ritsg11@gmail.com'
+          git add .
+          git commit -m "Automated sitemap update by GitHub action."
+          git push
+        else
+          echo "Sitemap unchanged. Nothing to push!"
+        fi
