@@ -1,8 +1,5 @@
 Moved to my new website [www.ritalighosh.com](https://www.ritalighosh.com/)!
 
-
-Moved to my new website [www.ritalighosh.com](https://www.ritalighosh.com/)!
-
 ---
 
 ### Welcome to my website design documentation! <img src="https://slackmojis.com/emojis/4975-party/download" width=40>
