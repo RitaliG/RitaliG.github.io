@@ -1,8 +1,5 @@
 Moved to my new website [www.ritalighosh.com](https://www.ritalighosh.com/)!
 
-
-Moved to my new website [www.ritalighosh.com](https://www.ritalighosh.com/)!
-
 ---
 
 ### Welcome to my website design documentation! <img src="https://slackmojis.com/emojis/4975-party/download" width=40>
@@ -54,7 +51,7 @@ jobs:
         publish_branch: gh-pages
         force_orphan: true
 ```
-NOTE: A GitHub Actions runner automatically creates a secret GITHUB_TOKEN to authenticate in your workflow. You can, therefore, start deploying without any configuration (*no need to create a personal access token*). In the root directory a `. nojekyll` file will be created with `enable_jekyll: false` if your files are not to be published through Jekyll. If you have not configured a custom domain, the URL defaults to `https://{USERNAME}.github.io/{REPO_NAME}`. For your custom domain, the cname option puts the CNAME file  in the publish directory with `YOUR.CUSTOM.URL`. Check out [create-pull-request](https://github.com/peter-evans/create-pull-request) action for more details on the GitHub workflows.
+NOTE: A GitHub Actions runner automatically creates a secret GITHUB_TOKEN to authenticate in your workflow. You can, therefore, start deploying without any configuration (*no need to create a personal access token*). In the publish directory, an empty `.nojekyll` file will be created when `enable_jekyll: false`, which you would need if your files are not to be published with Jekyll. If you have not configured a custom domain, the URL defaults to `https://{USERNAME}.github.io/{REPO_NAME}`. For your custom domain, the cname option puts the CNAME file  in the publish directory with `YOUR.CUSTOM.URL`. Check out [create-pull-request](https://github.com/peter-evans/create-pull-request) action for more details on the GitHub workflows.
 
 1. `Sitemap` to generate `sitemap.xml` file, once the previous `build` job has been deployed to the `gh-pages` branch. We will check out to the `gh-pages` branch (`ref:` option with `actions/checkout@v4`) and use the [generate-sitemap](https://github.com/cicirello/generate-sitemap) action  whenever a push or pull request is triggered.
   ```yaml
@@ -76,7 +73,7 @@ NOTE: A GitHub Actions runner automatically creates a secret GITHUB_TOKEN to aut
             include-pdf: true
   ```
  
- You can create a pull request in the `Sitemap` job with your custom message to verify the sitemap generated.
+You can create a pull request in the `Sitemap` job with your custom message to verify the sitemap generated.
  ```yaml 
         - name: Create Pull Request
           uses: peter-evans/create-pull-request@v6
