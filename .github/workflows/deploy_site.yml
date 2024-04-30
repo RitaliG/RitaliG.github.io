@@ -2,10 +2,8 @@ name: Build
 on:
   push:
     branches: [ main ] 
-    paths: [ '**.html', '**.pdf' ]
   pull_request:
     branches: [ main ]
-    paths: [ '**.html', '**.pdf' ]
   workflow_dispatch:
     
 jobs:
