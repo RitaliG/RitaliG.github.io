@@ -286,10 +286,12 @@ input, select, textarea {
 		-webkit-transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, color 0.25s ease-in-out;
 		-ms-transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, color 0.25s ease-in-out;
 		transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, color 0.25s ease-in-out;
-		background-color: transparent;
+		background-color: transparent; /* button bg is transparent*/
 		border-radius: 4px;
 		border: solid 1px #ccc;
 		color: #555;
+		font-size: 0.8em;
+		font-weight: 600;
 		cursor: pointer;
 		display: inline-block;
 		line-height: 1;
@@ -304,7 +306,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: #00D3B7;
+			border-color: #94cac3;
 			color: #00D3B7;
 		}
 
@@ -822,7 +824,7 @@ input, select, textarea {
 			}
 
 			ul.icons li .icon:before {
-				font-size: 1.5rem;
+				font-size: 2.1rem;
 			}
 
 /* Main */
@@ -837,7 +839,14 @@ input, select, textarea {
 		top: 0;
 		width: 22.5em;
 		height: 100%;
-		background: #2e3141; /* #fff; background webpage color */
+		/* background: #2e3141; /* #fff; background webpage color */
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("images/bg.jpg");
+		background-size: 130%,
+ 			cover;
+		background-attachment: local,
+ 			fixed;
+		background-position: right,
+ 			right;
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -888,7 +897,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main {
-				background: rgba(14, 14, 14, 0.925);  /* rgba(255, 255, 255, 0.925); webpage color on toggle */
+				background: #2e3141;/* very nice black rgba(14, 14, 14, 0.925);  /* rgba(255, 255, 255, 0.925); webpage color on toggle */
 			}
 
 				#main .toggle {
