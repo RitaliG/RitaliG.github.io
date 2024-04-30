@@ -135,7 +135,7 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #fff;
+		background-color: #fff; 
 		color: #aaa;
 	}
 
@@ -837,7 +837,7 @@ input, select, textarea {
 		top: 0;
 		width: 22.5em;
 		height: 100%;
-		background: #fff;
+		background: #2e3141; /* #fff; background webpage color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -888,7 +888,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main {
-				background: rgba(255, 255, 255, 0.925);
+				background: rgba(14, 14, 14, 0.925);  /* rgba(255, 255, 255, 0.925); webpage color on toggle */
 			}
 
 				#main .toggle {
@@ -905,7 +905,7 @@ input, select, textarea {
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
 				width: 100%;
-				background: #fff;
+				background: #2e3141; /* #fff mobile screen */
 				text-align: center;
 			}
 
@@ -1155,9 +1155,9 @@ input, select, textarea {
 			#viewer .inner .nav-previous {
 				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 				position: absolute;
-				top: 50%;
-				width: 6em;
-				height: 6em;
+				top: 50%; /* position of angle brackets relative to y-axis of image */
+				width: 4em;
+				height: 4em;
 				margin-top: -3em;
 				background-image: url("images/arrow.svg");
 				background-position: center;
