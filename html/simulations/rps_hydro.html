@@ -4,14 +4,15 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+
 <html>
 	<head>
 		<title>Ram pressure stripping</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<script src="./readingTime.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -36,7 +37,7 @@
 						<ul class="links">
 							<li><a href="../index.html">Home</a></li>
 							<li><a href="../cv.html">CV</a></li>
-							<li><a href="rps_hydro.html">Research</a></li>
+							<li><a href="../blogs/index.html">Research</a></li>
 							<li><a href="../publications.html">Publications</a></li>
 						</ul>
 						<a href="#" class="close">Close</a>
@@ -45,21 +46,50 @@
 		
 			<!-- Wrapper -->
 				<section id="wrapper">
+
 					<div class="wrapper style7">
+						
 						<div class="inner">
-							<h2 style="text-transform: capitalize; font-size: 1.3em;">ram Pressure stripping in clusters
+							<h2 style="text-transform: capitalize; font-size: 1.3em;">ram Pressure stripping in clusters 
+								&emsp; 
 								<br> 
-								<a><b style="color: #77b7ec">A tale of three phases...</b></a><br><a style="font-size: 0.8em; color: #cfbfbf">(~5 minute read)</a> <!-- <span id="time"></span> -->
-								</p>
-							</h2>
+								<a><b style="color: #77b7ec; font-size: 0.9em;">A tale of three phases</b></a> &ensp;
+								<a class="specialscroll" href="#middle" style="color: #af9b9b"></a> 
+									<br>	
+								<!-- blog read time -->
+								<a style="font-size: 0.8em; text-transform:lowercase; color: #cfbfbf">
+								 	(~<b><span id="time"></span></b> minutes read)
+								</a> 
+							</h2> 
 						</div>
+
 						<div class="box alt">
 							<div class="row gtr-uniform">
-								<div class="col-12"><span class="image fit"><img src="../images/jellyfish_galaxies_panel.jpg" alt="" /></span></div>
+								<div class="col-12">
+									<span class="image fit">
+										<a href="#" onmouseover="showText()"> 
+											<img src="../images/jellyfish_galaxies_panel.jpg" alt="" />
+										</a>
+										<div id="imageText" style="display: none; font-size: 0.9em">
+											A gallery of the spectacular observations of jellyfish galxies.
+											[Left to right]: Cluster IIZW108 hosting the jellyfish galaxy JO206;
+											zooming into the galaxy JO206 in HI (second panel) and Halpha (third panel); 
+											the spectacular multiphase emission in ESO 137-001;
+											the X-ray image of the cluster hosting JO201.
+											Credits: 
+											  <a href="https://iopscience.iop.org/article/10.3847/1538-4357/aa78ed">Poggianti et al. 2017</a>, 
+											  <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.4580R/abstract">Ramatsoku et al. 2019</a>,
+											  <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab3e6c">Jáchym et al. 2019</a>, 
+											  <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...911..144C/abstract">Campitiello et al. 2021</a>
+										</div>
+									</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
-				
+
+				</section>
 
 					<!-- Content -->
 						<div class="wrapper alt style3" id="article">
@@ -98,9 +128,10 @@
 								</section>
 																		
 								<section>
-									<h3 class="major" style="margin-top: 3.9em;">Hydrodynamic Simulations</h3>
+									<h3 class="major" style="margin-top: 3.9em;" id="middle">Hydrodynamic Simulations</h3>
 									<h4 style="text-transform: capitalize; font-size: 0.9em;">Stripping the circumgalactic and interstellar media</h4>
 									
+									<div></div>
 									<div class="box alt">
 										<div class="row gtr-uniform">
 											<div class="col-12"><span class="image fit"><iframe width="100%" height="360" src="https://www.youtube.com/embed/CieB_IgCy4o?autoplay=1&loop=1&playlist=CieB_IgCy4o"  frameborder="0" allowfullscreen></iframe></span></div>
@@ -108,7 +139,7 @@
 									</div>
 
 									<p style="text-align: justify; margin-bottom: 1.9em;"> 
-										Our 3D-hydrodynamic simulations of ram pressure stripping (Ghosh et al. 2024 <a href="https://arxiv.org/abs/2404.02035" style="color: MediumAquaMarine">arxiv:2404.02035</a>) of a galaxy facing constant wind from the ICM in a wind-tunnel setup, 
+										Our 3D-hydrodynamic simulations of ram pressure stripping (Ghosh et al. 2024 <a href="https://arxiv.org/abs/2404.02035" style="color: aquamarine">arxiv:2404.02035</a>) of a galaxy facing constant wind from the ICM in a wind-tunnel setup, 
 										reveal important physical mechanisms that remove the gaseous reservoir. We simulate a rotating galactic disk, in which Lagragian 
 										particles are initialized in the post-processing with ParaView. The interstellar disk in the above video is volume-rendered as 
 										a wireframe and colored according to its number density (the right colorbar initially, and later on the top). 
@@ -135,62 +166,52 @@
 									<p style="text-align: justify; margin-bottom: 1.9em;"><span class="image left"><img src="../images/disk_stripping.jpg" alt="disk" /></span>
 										For the ISM, we find that the gravity plays a critical role. The gas from the ISM is stripped when the impinging
 										ram pressure exceeds the gravitational restoring pressure from the stellar and dark matter potential of the galaxy. 
-										This is in accordance with the classic <a href="https://ui.adsabs.harvard.edu/abs/1972ApJ...176....1G/abstract" style="color: MediumAquaMarine">Gunn & Gott 1972 criterion </a>. 
+										This is in accordance with the classic <a href="https://ui.adsabs.harvard.edu/abs/1972ApJ...176....1G/abstract" style="color: aquamarine">Gunn & Gott 1972 criterion </a>. 
 										With increasing ram pressure strength
 										from yellow to pink curves, the ISM mass progressively becomes lower. Blue curves in different linestyles have the same 
 										pressure from the ICM and show a similar evolution. 
 										We therefore find that <b>the ISM is ram pressure stripped with gravitational restoring pressure determining its fate.</b>
 										The greater the impinging ram pressure, the higher is the ISM stripping!
 									</p>
-									<p style="text-align: justify; margin-bottom: 0.8em;"><span class="image right"><img src="../images/cgm_stripping.jpg" alt="cgm" /></span>
-										<em> The story for the CGM is, however, a bit different!</em>
-									</p>
+									<p style="text-align: justify; margin-bottom: 1.2em; margin-top: 0.1em;">
+										<span class="image right">
+											<!-- <a href="../images/cgm_stripping.jpg">
+												<img src="../images/cgm_stripping.jpg" alt="cgm" />Evolution of the CGM mass within the virial radius
+											</a> -->
+											<a href="#" id="imageLink">
+												<img src="../images/cgm_stripping.jpg" alt="cgm" />
+												Evolution of the CGM mass within the virial radius
+											</a>
+											<div id="imagePopup">
+												<img src="../images/cgm_stripping.jpg" alt="cgm" />
+											</div>
+										</span>
+										<em style="color:moccasin"> The story for the CGM is, however, a bit different!</em>
+										<br> <br>
 									<p style="text-align: justify; margin-bottom: 1.9em;">
 									   The gravitational restoring force on the CGM is mostly negligible. The CGM mass evolution is quite different at the same ram pressure strength
 									   as seen in the widely separated blue lines in different linestyles. In some cases, the CGM can survive for long (about 2Gyr) while
-									   in the others 90% of it is lost within 500 Myr. In Ghosh et al. 2024 (<a href="https://arxiv.org/abs/2404.02035" style="color: MediumAquaMarine">arxiv:2404.02035</a>),
+									   in the others 90% of it is lost within 500 Myr. In Ghosh et al. 2024 (<a href="https://arxiv.org/abs/2404.02035" style="color:aquamarine">arxiv:2404.02035</a>),
 									   we analyze the wide parameter space for CGM stripping and find that <b>gravity can not bind the circumgalactic reservoir.</b>
 									   The CGM-ICM interaction is analogous to ‘<em>cloud-wind interaction</em>’. 
 									   The stripping timescale depends not on the ram pressure but on the density contrast between the CGM and the ICM. 
-									</p>
-									<p>
-										Our study brings out important regimes of CGM stripping in clusters, notably the relatively unexplored
-										<a href="#"  style="color: MediumAquaMarine"><em> `bubble drag'</em> problem</a>. 
+									</p></p>
+									<p style="text-align: justify; margin-bottom: 1.9em;">
+										Our study brings out the important regimes of CGM stripping in clusters, notably the relatively unexplored
+										<a href="#"  style="color: aquamarine"><em> `bubble drag'</em> problem</a>. 
 										It is important to note that ram-pressure experinced by a galaxy in its orbit through the cluster potential well,
 										would determine whether the jellyfish galaxy loses its CGM completely in a close pericentric passage or not.
 										Fully describing the influence of environment of a galaxy is
 										likely to be a complex combination of different effects, with ram pressure stripping playing a small yet important role!
 									</p>
 								</div>
-								
-
-								
-								</section>
-								<!-- <section>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-6"><span class="image fit"><img src="../images/pic05.jpg" alt="" /></span></div>
-											<div class="col-6"><span class="image fit"><img src="../images/pic06.jpg" alt="" /></span></div>
-											<div class="col-6"><span class="image fit"><img src="../images/pic05.jpg" alt="" /></span></div>
-											<div class="col-6"><span class="image fit"><img src="../images/pic06.jpg" alt="" /></span></div>
-											<div class="col-6"><span class="image fit"><img src="../images/pic05.jpg" alt="" /></span></div>
-											<div class="col-6"><span class="image fit"><img src="../images/pic06.jpg" alt="" /></span></div>
-											
-										</div>
-									</div>
-									 -->
-									<!-- 
-									<h4>Left &amp; Right</h4>
-									
-									<p><span class="image left"><img src="../images/pic01.jpg" alt="" /></span>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien. Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-									<p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius. Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat. Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui.</p> -->
-								</section>
-
+								<div>
+									<a href="../blogs/index.html" class="special" style="width:50%; text-transform:none; color:rgb(195, 239, 215); font-size:medium">Stay tuned for more research blogs!</a></p>
+								</div>
 							</div>
 						</div>
 
 				</section>
-
 
 		<!-- Footer -->
 			<section id="footer">
@@ -199,8 +220,7 @@
 						<li style="color: BurlyWood;">&copy; Ritali Ghosh 2024.</li><li style="color: BurlyWood;">Design: <a href="http://html5up.net"  style="color: BurlyWood;">HTML5 UP</a></li>
 					</ul>
 				</div>
-			</section>
-			
+			</section>	
 
 		</div>
 
@@ -213,6 +233,39 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+		
+			<script>
+				function readingTime() {
+					const text = document.getElementById("article").innerText;
+					const wpm = 200;
+					const words = text.trim().split(/\s+/).length;
+					const time = Math.ceil(words / wpm);
+					document.getElementById("time").innerText = time;
+				  }
+				  readingTime();
+			</script>
+			<script>
+				const imageLink = document.getElementById('imageLink');
+				const imagePopup = document.getElementById('imagePopup');
 
+				imageLink.addEventListener('click', (e) => {
+					e.preventDefault(); // Prevent default link behavior
+					imagePopup.style.display = 'block';
+				});
+
+				// Close the popup when clicking outside the image
+				window.addEventListener('click', (e) => {
+					if (e.target === imagePopup) {
+						imagePopup.style.display = 'none';
+					}
+				});
+			</script>
+			<script>
+				function showText() {
+					document.getElementById("imageText").style.display = "block";
+				}
+			</script>
+			<div id="bottom"></div>
 	</body>
 </html>
+
