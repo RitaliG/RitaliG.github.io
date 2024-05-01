@@ -3722,10 +3722,20 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
-			background-color: #454858;
+			/* background-color: #454858; */
+			background-image: linear-gradient(#354d63f2, #3d4051); 
 		}
+			.wrapper.style4:before {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23354d63f2%3B' /%3E%3C/svg%3E");
+				box-shadow: inset 0 -1px 0 0 #354d63f2, 0 1px 0 0 #354d63f2;
+			}
 
-			.wrapper.style4:before, .wrapper.style4:after {
+			.wrapper.style4:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
+				box-shadow: inset 0 -1px 0 0  #3d4051, 0 1px 0 0 #3d4051;
+			}
+
+			/* .wrapper.style4:before, .wrapper.style4:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23454858%3B' /%3E%3C/svg%3E");
 			}
 
@@ -3735,7 +3745,7 @@ input, select, textarea {
 
 			.wrapper.style4:after {
 				box-shadow: inset 0 -1px 0 0 #454858, 0 1px 0 0 #454858;
-			}
+			} */
 
 		.wrapper.style5 {
 			background-color: #4d5060;
@@ -3767,6 +3777,21 @@ input, select, textarea {
 
 			.wrapper.style6:after {
 				box-shadow: inset 0 -1px 0 0 #555867, 0 1px 0 0 #555867;
+			}
+
+		.wrapper.style7 {
+			/* background-color: #3d4051; /* #3d4051;*/
+			background-color: #080808;
+			opacity: 0.95;
+		}
+
+			.wrapper.style7:before {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%080808%3B' /%3E%3C/svg%3E");
+					box-shadow: inset 0 -1px 0 0 #080808, 0 1px 0 0 #080808;
+				}
+			.wrapper.style7:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
+				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
 			}
 
 		.wrapper.spotlight {
