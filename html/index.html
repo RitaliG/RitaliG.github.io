@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	</head>
 	<body class="is-preload">
 
@@ -130,18 +131,26 @@
 									<ul class="actions">
 										<li><a href="#" class="button">Browse All</a></li>
 									</ul> -->
+									
+									
 								</div>
 							</section>
 						
 
 					</section>
 
+					
 				<!-- Footer -->
 						<section id="footer">
 							<div class="inner">
+								<div>
+									<div id="map" style="height: 140px; width:25%; position: absolute; right:22%; display: inline;"></div>
+								    <p style="font-size:1.2em; right:10px;"><b style="color:aquamarine;">Total Visitors: <span id="visitorCount">0</span></b></p>
+								</div>
+								<div>
 								<ul class="copyright">
 									<li style="color: BurlyWood;">&copy; Ritali Ghosh 2024.</li><li style="color: BurlyWood;">Design: <a href="http://html5up.net"  style="color: BurlyWood;">HTML5 UP</a></li>
-								</ul>
+								</ul></div>
 							</div>
 						</section>	
 				
@@ -154,6 +163,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+			<script src="./visitor_count.js"></script>
 
 	</body>
 </html>
