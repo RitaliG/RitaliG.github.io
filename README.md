@@ -102,3 +102,7 @@ If everything works fine, within the `Sitemap` job you can create a push action 
 ```
 
 ### <img src="https://slackmojis.com/emojis/17617-mariodance_pbj/download" width=60> Hey, that was cool!
+
+---
+
+Added a widget displaying map of unique vistor counts and their location. Special thanks to Alankar Dutta's repo: [website-visitor-stat-app](https://github.com/dutta-alankar/website-visitor-stat-app).
