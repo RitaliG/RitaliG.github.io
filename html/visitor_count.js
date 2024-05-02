@@ -1,6 +1,10 @@
  // Initialize the visitor coordinates
  var visitorCoordinates = [ ];
- const serverAddress = 'https://ritali.pythonanywhere.com/api/coordinates'
+ var visitor_IP = '';
+ const serverAddress  = 'https://ritali.pythonanywhere.com/api/coordinates'
+ const serverfetchLoc = 'https://ritali.pythonanywhere.com/api/geo-location'
+ // const serverAddress  = 'http://localhost:5000/api/coordinates'
+ // const serverfetchLoc = 'http://localhost:5000/api/geo-location'
 
  // Initialize the map
  var map = L.map('map').setView([-0, 23], 0.2); /* latitude and longitude adjustment for center of the map */
@@ -30,16 +34,33 @@
          .catch(error => {
              console.error('Error fetching initial coordinates:', error);
          });
+     fetchIP(); // fetch the visitor ip
+ }
+ 
+ // Function to get IP address of visitor
+ function fetchIP() {
+     fetch('https://api.ipify.org?format=json')
+         .then(response => response.json())
+         .then(data => {
+             visitor_IP = data.ip;
+         })
+         .catch(error => {
+             console.error('Error fetching the API:', error);
+     });
  }
 
  // Function to get geolocation and send to the server
  function fetchGeoLocation() {
-     fetch('http://ip-api.com/json/')
-         .then(response => response.json())
-         .then(data => {
+ fetch(serverfetchLoc, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ ip: visitor_IP })
+     })
+     .then(response => response.json())
+     .then(data => {
              if(data.status === 'success') {
                  var newCoord = [data.lat, data.lon];
-                 sendCoordinatesToServer(newCoord);
+                 sendCoordinatesToServer(newCoord, data.org, data.city);
              } else {
                  console.error("Failed to fetch geolocation: " + data.message);
              }
@@ -50,13 +71,15 @@
  }
 
  // Function to send coordinates to the server
- function sendCoordinatesToServer(newCoord) {
+ function sendCoordinatesToServer(newCoord, org, city) {
      fetch(serverAddress, {
-         method: 'POST',
-         headers: {
-             'Content-Type': 'application/json'
-         },
-         body: JSON.stringify({ coordinates: newCoord })
+                           method: 'POST',
+                           headers: { 'Content-Type': 'application/json' },
+                           body: JSON.stringify({ coordinates: newCoord,
+                                                  ip: visitor_IP,
+                                                  org: org,
+                                                  city: city
+                                                })
      })
      .then(response => response.json())
      .then(data => {
@@ -72,10 +95,10 @@
                  loadMarkers(visitorCoordinates[i]);
              }
              document.getElementById('visitorCount').textContent = visitorCoordinates.length;
- })
-         .catch(error => {
+     })
+     .catch(error => {
              console.error('Error re-fetching updated coordinates:', error);
-         });
+     });
      })
      .catch(error => {
          console.error('Error sending coordinates:', error);

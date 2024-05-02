@@ -165,12 +165,22 @@
 								<div>
 									<p style="text-align: justify; margin-bottom: 1.9em;">
 										<span class="image left">
-											<a href="#" id="imageLink">
-												<img src="../images/disk_stripping.jpg" alt="disk" />
-											</a>
-											<div id="imagePopup">
-												<img src="../images/disk_stripping.jpg" alt="disk" />
-											</div>
+											<a href="javascript:void(0)" id="box1">
+												<img src="../images/disk_stripping.jpg" id="img1" alt="ism" />
+											</a> 
+											<div id="popupBoxOnePosition">
+												<div class="popupBoxWrapper">
+													<div class="popupBoxContent">
+														<p id="closebox1" style="position: absolute; transform: translate(0%, -70%);">Close &#x2717</a></p>
+														<img src="../images/disk_stripping.jpg" id='img1' alt="disk mass">
+														<p id="box1" style="text-align: center; font-size:0.8em;">
+															Evolution of the ISM mass within the initial cylindrical <br>
+															 region around the disk (<a href="https://arxiv.org/abs/2404.02035" style="color:aquamarine">Ghosh et al. 2024</a>)
+															 <!-- <a style="text-align: right;">Close &#x2717</a> -->
+														</p>
+													</div>
+												</div>
+											</div>			
 										</span>
 										For the ISM, we find that the gravity plays a critical role. The gas from the ISM is stripped when the impinging
 										ram pressure exceeds the gravitational restoring pressure from the stellar and dark matter potential of the galaxy. 
@@ -183,15 +193,21 @@
 									</p>
 									<p style="text-align: justify; margin-bottom: 1.2em; margin-top: 0.1em;">
 										<span class="image right">
-											<!-- <a href="../images/cgm_stripping.jpg">
-												<img src="../images/cgm_stripping.jpg" alt="cgm" />Evolution of the CGM mass within the virial radius
-											</a> -->
-											<a href="#" id="imageLink">
-												<img src="../images/cgm_stripping.jpg" alt="cgm" />
-												Evolution of the CGM mass within the virial radius
+											<a href="javascript:void(0)" id="box2">
+												<span><img src="../images/cgm_stripping.jpg" alt="cgm" /></span>
+												<!-- Evolution of the CGM mass within the virial radius -->
 											</a>
-											<div id="imagePopup">
-												<img src="../images/cgm_stripping.jpg" alt="cgm" />
+											<div id="popupBoxTwoPosition">
+												<div class="popupBoxWrapper">
+													<div class="popupBoxContent">
+														<p id="closebox2" style="position: absolute; transform: translate(0%, -70%);">Close &#x2717</a></p>
+														<img src="../images/cgm_stripping.jpg" alt="cgm mass">
+													    <p id="box2" style="text-align: center; font-size:0.8em;">
+															Evolution of the CGM mass within the galaxy's <br>
+															 virial radius (<a href="https://arxiv.org/abs/2404.02035" style="color:aquamarine">Ghosh et al. 2024</a>)
+														</p>
+													</div>
+												</div>
 											</div>
 										</span>
 										<em style="color:moccasin"> The story for the CGM is, however, a bit different!</em>
@@ -214,7 +230,7 @@
 									</p>
 								</div>
 								<div>
-									<a href="../blogs/index.html" class="special" style="width:50%; text-transform:none; color:rgb(195, 239, 215); font-size:medium">Stay tuned for more research blogs!</a></p>
+									<a href="../blogs/index.html" class="special" style="width:50%; text-transform:none; color:rgb(195, 239, 215); font-size:0.9em">Stay tuned for more research blogs!</a></p>
 								</div>
 							</div>
 						</div>
@@ -241,38 +257,10 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-		
-			<script>
-				function readingTime() {
-					const text = document.getElementById("article").innerText;
-					const wpm = 200;
-					const words = text.trim().split(/\s+/).length;
-					const time = Math.ceil(words / wpm);
-					document.getElementById("time").innerText = time;
-				  }
-				  readingTime();
-			</script>
-			<script>
-				const imageLink = document.getElementById('imageLink');
-				const imagePopup = document.getElementById('imagePopup');
-
-				imageLink.addEventListener('click', (e) => {
-					e.preventDefault(); // Prevent default link behavior
-					imagePopup.style.display = 'block';
-				});
-
-				// Close the popup when clicking outside the image
-				window.addEventListener('click', (e) => {
-					if (e.target === imagePopup) {
-						imagePopup.style.display = 'none';
-					}
-				});
-			</script>
-			<script>
-				function showText() {
-					document.getElementById("imageText").style.display = "block";
-				}
-			</script>
+			<script src="./readingTime.js"></script>
+			<script src="./show_text_pop.js"></script>
+			<script src="./popup_cgm.js"></script>
+			
 			<div id="bottom"></div>
 	</body>
 </html>
