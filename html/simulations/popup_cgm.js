@@ -7,7 +7,7 @@ document.getElementById('box1').addEventListener('click', function(){
     e.style.display = 'none';
   else{
     e.style.display = 'block';
-    e.style.transform = 'scale(1.7)';}
+    e.style.transform = 'scale(1.3)';}
 });
 
 // When the user clicks on Click here to close modal
@@ -24,7 +24,7 @@ document.getElementById('box2').addEventListener('click', function(){
     elpopupBoxTwoPosition.style.display = 'none';
   else{
     elpopupBoxTwoPosition.style.display = 'block';
-    elpopupBoxTwoPosition.style.transform = 'scale(1.7)';}
+    elpopupBoxTwoPosition.style.transform = 'scale(1.3)';}
 });
   
 // When the user clicks on Click here to close modal
