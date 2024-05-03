@@ -19,15 +19,17 @@ function loadMarkers(coord) {
     L.marker(coord).addTo(map);
 }
 
-// Function to fetch initial coordinates from the server
-function fetchInitialCoordinates() {
-    fetchIP(); // fetch the visitor ip
-    fetch(serverAddress)
+// Function to fetch initial coordinates from the server and then add the new coordinates to map
+function fetchCoordinates_drawPinOnMap() {
+    // fetch the visitor IP
+    fetchIP() 
+    .then(() => {  // Ensuring IP is fetched before fetching geolocation
+        fetch(serverAddress)
         .then(response => response.json())
         .then(data => {
             for (var i = 0; i < data.length; i++) {
                 visitorCoordinates.push(data[i]);
-                loadMarkers(visitorCoordinates[i]);
+                loadMarkers(visitorCoordinates[i]); // place pins on map
             }
             document.getElementById('visitorCount').textContent = visitorCoordinates.length;
             fetchGeoLocation();  // Get new geolocation and update server after initial fetch
@@ -35,6 +37,7 @@ function fetchInitialCoordinates() {
         .catch(error => {
             console.error('Error fetching initial coordinates:', error);
         }); 
+    });
 }
 
 // Function to get IP address of visitor
@@ -86,19 +89,19 @@ function sendCoordinatesToServer(newCoord, org, city) {
         console.log('Success:', data);
         // Re-fetch all coordinates including the new one to update the map
         fetch(serverAddress)
-.then(response => response.json())
-.then(data => {
-            for (var i = 0; i < data.length; i++) {
-                if (i>visitorCoordinates.length-1) {
-                    visitorCoordinates.push(data[i]);
-                }
-                loadMarkers(visitorCoordinates[i]);
-            }
-            document.getElementById('visitorCount').textContent = visitorCoordinates.length;
-    })
-    .catch(error => {
-            console.error('Error re-fetching updated coordinates:', error);
-    });
+        .then(response => response.json())
+        .then(data => {
+                    for (var i = 0; i < data.length; i++) {
+                        if (i>visitorCoordinates.length-1) {
+                            visitorCoordinates.push(data[i]); // add new position
+                        }
+                        loadMarkers(visitorCoordinates[i]); // again add all pins on map
+                    }
+                    document.getElementById('visitorCount').textContent = visitorCoordinates.length;
+            })
+            .catch(error => {
+                console.error('Error re-fetching updated coordinates:', error);
+            });
     })
     .catch(error => {
         console.error('Error sending coordinates:', error);
@@ -107,5 +110,5 @@ function sendCoordinatesToServer(newCoord, org, city) {
 
 // On page load, fetch initial coordinates
 window.onload = function() {
-    fetchInitialCoordinates();
+    fetchCoordinates_drawPinOnMap();
 };
