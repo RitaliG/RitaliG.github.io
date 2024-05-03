@@ -95,7 +95,7 @@ function sendCoordinatesToServer(newCoord, org, city) {
                         if (i>visitorCoordinates.length-1) {
                             visitorCoordinates.push(data[i]); // add new position
                         }
-                        loadMarkers(visitorCoordinates[i]); // re-add all pins on map
+                        loadMarkers(visitorCoordinates[i]); // again add all pins on map
                     }
                     document.getElementById('visitorCount').textContent = visitorCoordinates.length;
             })
