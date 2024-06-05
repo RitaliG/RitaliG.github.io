@@ -389,7 +389,7 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 0.9em;
+		font-size: 0.99em; /*changed from default 0.9em */
 	}
 
 	h4 {
